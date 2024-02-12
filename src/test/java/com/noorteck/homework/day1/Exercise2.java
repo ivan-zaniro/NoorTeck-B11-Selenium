@@ -48,7 +48,7 @@ public class Exercise2 extends Hooks {
 		postal.sendKeys("2022");
 
 		WebElement country = driver.findElement(By.name("country"));
-
+ 
 		Select countryDropdown = new Select(country);
 
 		List<WebElement> countryList = countryDropdown.getOptions();
