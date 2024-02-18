@@ -7,8 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import utils.Hooks;
+import utils.HooksChrome;
 
-public class Exercise2 extends Hooks {
+public class Exercise2 extends HooksChrome {
 
 	public static void main(String[] args) {
 		setUp();

@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 //import utils.Hooks;
-import utils.Hooks;
+//import utils.Hooks;
+import utils.HooksChrome;
 
 
 
 
-public class Exercise1 extends Hooks {
+public class Exercise1 extends HooksChrome  {
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -17,8 +18,8 @@ public class Exercise1 extends Hooks {
 
 		driver.get("https://ntkhr.noortecktraining.com/web/index.php/auth/login");
 
- 		WebElement usernameField = driver.findElement(By.name("username"));
-		WebElement passwordField = driver.findElement(By.name("password"));
+ 		WebElement usernameField = driver.findElement(By.xpath("(//input[contains(class(),'oxd-input oxd-input--active')])[1]"));
+		WebElement passwordField = driver.findElement(By.name("(//input[contains(class='oxd-input.oxd-input--active')])[2]"));
 
  		usernameField.click();
 		Thread.sleep(1000);
