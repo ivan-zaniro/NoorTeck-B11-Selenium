@@ -17,24 +17,27 @@ public class Exercise1 extends HooksChrome  {
 		setUp();
 
 		driver.get("https://ntkhr.noortecktraining.com/web/index.php/auth/login");
-
- 		WebElement usernameField = driver.findElement(By.xpath("(//input[contains(class(),'oxd-input oxd-input--active')])[1]"));
-		WebElement passwordField = driver.findElement(By.name("(//input[contains(class='oxd-input.oxd-input--active')])[2]"));
+		Thread.sleep(3000);
+		
+ 		WebElement usernameField = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input"));
+ 		
+		WebElement passwordField = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input"));
 
  		usernameField.click();
-		Thread.sleep(1000);
+		
 
 		usernameField.sendKeys("ntk-admin");
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		passwordField.click();
 
 		passwordField.sendKeys("Ntk-orange!admin.123");
-
+		Thread.sleep(2000);
+		
 		WebElement login = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button"));
 
 		login.click();
-
+		Thread.sleep(2000);
 		String headerText = driver.getTitle();
 		
 		System.out.println(headerText);
