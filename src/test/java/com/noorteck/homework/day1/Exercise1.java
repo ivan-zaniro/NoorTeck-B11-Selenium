@@ -1,5 +1,7 @@
 package com.noorteck.homework.day1;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -27,14 +29,16 @@ public class Exercise1 extends HooksChrome  {
 		
 
 		usernameField.sendKeys("ntk-admin");
-		Thread.sleep(2000);
-
+//		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		
 		passwordField.click();
 
 		passwordField.sendKeys("Ntk-orange!admin.123");
 		Thread.sleep(2000);
 		
-		WebElement login = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button"));
+		WebElement login = driver.findElement(By.cssSelector(".oxd-button.oxd-button--medium.oxd-button--main.orangehrm-login-button"));
 
 		login.click();
 		Thread.sleep(2000);
