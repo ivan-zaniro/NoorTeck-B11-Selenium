@@ -19,9 +19,9 @@ public class Exercise1 extends HooksChrome  {
 		driver.get("https://ntkhr.noortecktraining.com/web/index.php/auth/login");
 		Thread.sleep(3000);
 		
- 		WebElement usernameField = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/div[2]/input"));
+ 		WebElement usernameField = driver.findElement(By.xpath("//input[@name='username']"));
  		
-		WebElement passwordField = driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[2]/div/div[2]/input"));
+		WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
 
  		usernameField.click();
 		
